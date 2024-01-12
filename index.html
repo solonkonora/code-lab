@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <link href="./assets/style/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link href="./assets/style/style.css" rel="stylesheet">
 
 </head>
+
 <body>
-    <div class="container">
-        <h1>Quiz App</h1>
+  <div class="container">
+    <h1>Hellooo and Welcome to our <br> Quiz App</h1>
 
-<form>
-  <label for="name">Select Category:</label>
-  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <div class="general-divs" id="general-divs">
 
-  <label for="email">Select Difficulty:</label>
-  <input type="email" id="email" name="email" placeholder="....." required>
+      <div class="first">
+        <h2>Select Category:</h2>
+        <select class="select-button">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <div class="first">
+        <h2>Select Difficulty:</h2>
+        <select class="select-button">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <div class="first">
+        <h2>Select Question type:</h2>
+        <select class="select-button">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <div class="first">
+        <h2>Amount of Questions:</h2>
+        <input type="number" class="number-field" min="0" max="100" step="1">
+      </div>
 
-  <label for="password">Select Question type:</label>
-  <input type="password" id="password" name="password" placeholder="..." required>
-
-  <label for="message">Questions:</label>
-  <textarea id="message" name="message" placeholder="...." required></textarea>
-
-  <button type="submit">Get Started</button>
-</form>
-
+      <a href="#" class="get-started-button">Get Started</a>
     </div>
-
-     <script src="./assets/scripts/script.js"></script>
-</body>
-</html>

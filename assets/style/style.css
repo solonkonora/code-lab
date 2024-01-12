@@ -4,49 +4,53 @@ body {
 }
 
 .container {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background: ;
-
+  height: 100vh;
+  text-align: start;
 }
- 
-.container h1 {
+
+h1 {
   text-align: center;
-  justify-self: center;
-  margin: 0 auto;
 }
 
-form {
-  width: 300px;
-  margin: 0 auto;
+.first {
+  margin-bottom: 20px;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
+.select-button {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 5px;
+  font-size: 14px;
 }
 
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+.number-field {
+  width: 93%;
+  padding: 8px;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
+  font-size: 14px;
 }
 
-input[type="submit"]:hover {
+.get-started-button {
+  width: 84%;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #181080;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.get-started-button:hover {
   background-color: #45a049;
 }
-
