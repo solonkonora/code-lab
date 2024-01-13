@@ -1,6 +1,6 @@
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
-let questions = []; // Initialize an empty array to store the questions
+let question = [];
 
 function fetchQuestions() {
   // Make a request to the API to fetch the questions
