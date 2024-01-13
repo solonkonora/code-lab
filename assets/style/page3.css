@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+#quiz-container #final-score {
+  margin-top: 20px;
+  font-weight: bold;
+}
