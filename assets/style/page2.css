@@ -2,27 +2,40 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", Verdana, sans-serif;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  gap: 13px;
-}
-
-.box {
-  text-align: center;
-  padding-bottom: 20px;
-  border: 1px solid #333;
-  width: 200px;
+#question {
   height: 40px;
+  width: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+
+  text-align: center;
+  background-color: green;
 }
 
-h2 {
-  color: #333;
+#options-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+
+  background-color: green;
 }
 
-p {
-  color: #666;
+.option {
+  padding: 10px;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.correct-option {
+  background-color: #4caf50;
+}
+
+.wrong-option {
+  background-color: #f44336;
 }
