@@ -1,5 +1,17 @@
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
+let questions = []; // Initialize an empty array to store the questions
+
+function fetchQuestions() {
+  // Make a request to the API to fetch the questions
+  fetch('https://opentdb.com/api.php?amount=10')
+    .then(response => response.json())
+    .then(data => {
+      questions = data.results;
+      displayQuestion();
+    })
+    .catch(error => console.error('Error fetching questions:', error));
+}
 
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
@@ -40,4 +52,4 @@ function checkAnswer(selectedOption) {
   }
 }
 
-displayQuestion();
+fetchQuestions();
