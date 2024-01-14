@@ -1,8 +1,12 @@
+let correctAnswers = 0;
+
 function showFinalScore() {
     const finalScoreContainer = document.getElementById('final-score');
-    finalScoreContainer.innerText = `Your Final Score: ${correctAnswers} out of ${questions.length}`;
-  }
-  
+    finalScoreContainer.innerHTML = `Your Final Score: ${correctAnswers} out of ${questions.length}`;
+}
+
+showFinalScore();
+
 //   function resetQuiz() {
 //     currentQuestionIndex = 0;
 //     questions = [];
@@ -11,5 +15,3 @@ function showFinalScore() {
 //     document.getElementById('options-container').innerHTML = '';
 //     document.getElementById('final-score').innerText = '';
 //   }
-  
-  showFinalScore();

@@ -2,16 +2,48 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let question = [];
 
+// function fetchQuestions() {
+//     // Make a request to the API to fetch the questions
+//     fetch('https://opentdb.com/api.php?amount=2')
+//       .then(response => response.json())
+//       .then(data => {
+//         questions = data.results;
+  
+//         if (questions && questions.length > 0) {
+//           displayQuestion();
+//           // Access properties of the first question and display it
+//           // ...
+//         } else {
+//           console.error('No questions available.');
+//         }
+//       })
+//       .catch(error => console.error('Error fetching questions:', error));
+//   }
+
 function fetchQuestions() {
-  // Make a request to the API to fetch the questions
-  fetch('https://opentdb.com/api.php?amount=10')
-    .then(response => response.json())
-    .then(data => {
-      questions = data.results;
-      displayQuestion();
-    })
-    .catch(error => console.error('Error fetching questions:', error));
-}
+    // const numQuestionField = document.getElementById('num-questions');
+    // // const numQuestions = parseInt(numQuestionField.value);
+
+    const apiUrl = `https://opentdb.com/api.php${window.location.search}`
+    
+    // Make a request to the API to fetch the questions
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        questions = data.results;
+
+        console.log(data)
+
+        if (questions && questions.length > 0) {
+          displayQuestion();
+          // Access properties of the first question and display it
+          // ...
+        } else {
+          console.error('No questions available.');
+        }
+      })
+      .catch(error => console.error('Error fetching questions:', error));
+  }
 
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
